@@ -1,0 +1,496 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(359deg, #f2ecec, #bff4f1);
+  background-size: 400% 400%;
+  animation: AnimationEnhance 5s ease infinite;
+  line-height: 1.6;
+}
+
+
+.boldtext {
+  background: linear-gradient(359deg, #e20c0c, #a7f302);
+  text-align: center;
+  background-clip: text;
+  color: transparent;
+}
+
+
+header {
+  background-color: #333;
+  padding: 30px 0;
+}
+
+header nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 100px;
+  background-color: #890c0c;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+
+.profiledescribe {
+  display: flex;
+
+}
+
+.firstcolumn {
+  margin-top: 65px;
+  margin-left: 50px;
+
+}
+
+.firstcolumn img {
+  height: 400px;
+  transition: transform 0.8s ease;
+  /* background-color: #232020; */
+  border-radius: 100%;
+  /* opacity: 0.5; */
+}
+
+.firstcolumn img:hover {
+  transform: scale(1.2);
+}
+
+
+.secondcolumn {
+  /* background-color: #277b9e; */
+  border-radius: 20%;
+  margin-top: 30px;
+  width: 600px;
+  height: 450px;
+  margin-left: 10px;
+}
+
+
+.secondcolumn h3 {
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.secondcolumn h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: -20px;
+  margin-bottom: 10px;
+
+}
+
+
+.typewrite[data-type='[ "Full Stack Developer...", "Backend Developer...", "Software Developer..." ]'] {
+  color: rgb(0, 0, 0);
+  font-size: large;
+  text-decoration: none;
+}
+
+
+.typewrite {
+  font-weight: bold;
+  margin-left: 210px;
+}
+
+.typewrite .wrap {
+  border-right: 0.1em solid #fff;
+}
+
+
+.profilelink {
+  text-align: center;
+
+}
+
+.profilelink a {
+  text-decoration: none;
+}
+
+
+.profilelink a i {
+  font-size: 50px;
+  color: #202421;
+  transition: transform 0.3s ease;
+}
+
+
+.profilelink a:hover i {
+  transform: scale(1.5);
+}
+
+
+.glow-on-hover a {
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+.glow-on-hover {
+  margin-top: 30px;
+  margin-left: 185px;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+.aboutme {
+  display: flex;
+  background-color: #76d4cf;
+  height: 450px;
+}
+
+
+.section1 {
+  padding: 50px;
+  width: 60%;
+
+}
+
+.section1 h1,
+p {
+  text-align: center;
+}
+
+
+
+.skill {
+  position: relative;
+  padding-bottom: 20px;
+  width: 300px;
+}
+
+.skill-bar-full,
+.skill-bar {
+  height: 20px;
+  border-radius: 10px;
+
+}
+
+.skill-bar-full {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+
+}
+
+.skill-bar {
+  position: absolute;
+  background-color: #9f1212;
+  animation: progressAnimation 3s ease-in-out forwards;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+
+}
+
+
+.educontainer {
+  background-color: #6d79ba;
+  display: flex;
+  gap: 10px;
+}
+
+.educationbox {
+  width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.educationbox:hover {
+  transform: scale(1.1);
+  background: linear-gradient(359deg, #05e9b4, #046def);
+  background-size: 400% 400%;
+  animation: AnimationEnhance 8s ease infinite;
+  box-shadow: 0 0 100px rgba(94, 255, 0, 0.5);
+}
+
+@keyframes AnimationEnhance {
+  0% {
+    background-position: 43% 0%
+  }
+
+  50% {
+    background-position: 58% 100%
+  }
+
+  100% {
+    background-position: 43% 0%
+  }
+}
+
+
+.projectclass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.project {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: #f9f9f9;
+
+}
+
+.project img {
+  height: auto;
+  width: 700px;
+}
+
+.project h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.project button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.9s;
+  transition-timing-function: ease; 
+  cursor: pointer;
+  margin-left: 270px;
+}
+
+.project button a {
+  color: white;
+  text-decoration: none;
+}
+
+.project button:hover {
+  background-color: #012f04; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.scrollcontainer img {
+  margin-left: 170px;
+}
+
+.hiremepanel {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #386361;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.hiremepanel h4 {
+  font-size: 20px;
+  color: #000000;
+}
+
+.hiremepanel p {
+  color: #ffffff;
+  margin-top: -10px;
+
+}
+
+
+.linksfully {
+  font-size: large;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.linkbutton {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.linkbutton button {
+  margin: 0 10px;
+  background-color: #890C0C;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 500px;
+  height: 70px;
+
+}
+
+.linkbutton button:hover {
+  background-color: #005f91;
+  animation: shake 0.5s ease;
+}
+
+.linkbutton button a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+.fab {
+  font-size: 40px;
+  padding-left: 10px;
+
+}
+
+.fab:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.5);
+  /* Zoom out effect on hover */
+}
+
+.fa-github {
+  color: black;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+}
+
+.fa-twitter {
+  color: #1da1f2;
+}
+
+.fa-facebook {
+  color: #1877f2;
+}
+
+.fa-instagram {
+  color: #c13584;
+}

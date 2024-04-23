@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manish Gautam - Software Engineer</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#homescroll">Home</a></li>
+                <li><a href="#aboutmescroll">About</a></li>
+                <li><a href="#projectsscroll">Projects</a></li>
+                <li><a href="#certificatesscroll">Certificates</a></li>
+                <li><a href="#contactscroll">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        //This is not My code
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            // var css = document.createElement("style");
+            // css.type = "text/css";
+            // css.innerHTML = ".typewrite > .wrap { border-right: 0.1em solid #fff}";
+            // document.body.appendChild(css);
+        };
+    </script>
+
+
+    <div class="profiledescribe">
+        <div class="firstcolumn">
+            <img src="/images/manishh.png" alt="Manish Gautam's profile picture">
+        </div>
+        <div class="secondcolumn">
+            <h3>Hello,I am </h3>
+            <h1>Manish Gautam</h1>
+
+                <a href="" class="typewrite" data-period="2000"
+                    data-type='[ "Full Stack Developer...", "Backend Developer...", "Software Developer..." ]'>
+                    <span class="wrap"></span>
+                </a>
+
+            <h3>The backend: where data management and application <br> logic merge seamlessly.</h3>
+
+            <div class="profilelink">
+                <a href="https://github.com/itsmanishgautam" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://linkedin.com/in/itsmanishgautam" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <button class="glow-on-hover" type="button"><a href="/files/ManishGautam Resume.pdf"
+                    download="ManishCV">Download Resume</a></button>
+
+        </div>
+    </div>
+
+
+
+    <h1 class="boldtext" id="aboutmescroll">About Me</h1>
+
+    <div class="aboutme">
+        <div class="section1">
+            <h1>I am Manish Gautam</h1>
+            <p>Hi there!
+                I'm a student at Texas International College, diving into the world of software engineering. I'm really
+                into coding with Python and using it with Django to make websites. I also know some other stuff like
+                HTML, CSS, Bootstrap, and JavaScript for making websites look cool and interactive.
+                I'm super excited about learning more about AI and Machine Learning with Python. If you're into tech
+                too, let's connect and explore together!</p>
+        </div>
+
+        <div class="section2">
+            <h2>Languages and Framework</h2>
+            <div class="skills" id="background">
+                <div class="skill">
+                    <div class="skill-name"><i class="fa-brands fa-html5"></i>HTML</div>
+                    <div class="skill-bar-full"></div>
+                    <div class="skill-bar" style="width: 60%;"></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name"><i class="fa-brands fa-css3-alt"></i>CSS</div>
+                    <div class="skill-bar-full"></div>
+                    <div class="skill-bar" style="width: 50%;"></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name"><i class="fa-brands fa-bootstrap"></i>Bootstrap</div>
+                    <div class="skill-bar-full"></div>
+                    <div class="skill-bar" style="width: 40%;"></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Django</div>
+                    <div class="skill-bar-full"></div>
+                    <div class="skill-bar" style="width: 50%;"></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name"><i class="fa-brands fa-python"></i>Python</div>
+                    <div class="skill-bar-full"></div>
+                    <div class="skill-bar" style="width: 60%;"></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Python with AI</div>
+                    <div class="skill-bar-full"></div>
+                    <div class="skill-bar" style="width: 30%;"></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">ML Python</div>
+                    <div class="skill-bar-full"></div>
+                    <div class="skill-bar" style="width: 30%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="boldtext">Education</h1>
+
+    <div class="educontainer">
+        <div class="educationbox">
+            <h4><br>Navodaya Madhyamik Vidya Mandir</h4>
+            <p>I concluded my high school journey with an A+ GPA, establishing a solid academic foundation.</p>
+            <h4>High School</h4>
+        </div>
+        <div class="educationbox">
+            <h4><br>Damak Model College</h4>
+            <p>Achieving an impressive A grade in Science Major was a big win for me academically.</p>
+            <h4>Higher Secondary School</h4>
+        </div>
+        <div class="educationbox">
+            <h4><br>Texas International College</h4>
+            <p>I'm currently studying BSc. CSIT at Texas College, which is affiliated with TU.</p>
+            <h4>Bachelor's Degree (Ongoing)</h4>
+        </div>
+    </div>
+
+    <h1 class="boldtext" id="projectsscroll">Completed Projects</h1>
+
+    <div class="projectclass">
+        <div class="project">
+            <img src="/images/job.png" alt="JobSearchingPortal">
+            <h1>Job Searching Portal</h1>
+            <p>Introducing our Job Portal: Your go-to platform for effortless job searching and streamlined <br>
+                recruitment. Admins manage listings and applications, while users easily search, save, and<br>
+                apply for jobs. Simplify your job hunt or hiring process with us today.
+            </p>
+            <button><a href="https://github.com/itsmanishgautam/jobsearching-main">Github Link</a></button>
+        </div>
+        <br>
+        <div class="project">
+            <img src="/images/quiz.png" alt="QuizApp">
+            <h1>Quiz App</h1>
+            <p>Introducing our Quiz App: A user-friendly platform for creating, managing, and taking quizzes. <br>
+                Admins control tests, users take them, and everyone benefits from engaging learning experiences.</p>
+            <!-- <button>Github Link</button> -->
+            <button><a href="https://github.com/itsmanishgautam/svm-app"> Github Link</a></button>
+
+        </div>
+        <br>
+        <div class="project">
+            <img src="/images/todo.png" alt="Todo App">
+            <h1>Todo App</h1>
+            <p>A Basic Todo App, where user can insert text and mark as completed as well as delete it.</p>
+            <button><a href="https://github.com/itsmanishgautam/TodoAppWORKING"> Github Link</a></button>
+
+        </div>
+        <br>
+    </div>
+
+    <h1 class="boldtext" id="certificatesscroll">Certificates</h1>
+
+    <div class="certificates">
+        <div class="scrollcontainer">
+            <img src="/images/AI with Python.png" style="width: 400px;" alt="certificatea">
+            <img src="/images/Python ML.png" style="width: 400px;" alt="certificateb">
+        </div>
+    </div>
+
+    <div class="hiremepanel">
+        <h4>Do you have any project ?</h4>
+        <p> I'm Available For Freelancer Projects</p>
+    </div>
+
+    <div class="linksfully" id="contactscroll">
+        <div>
+            <h2>Collaborate </h2>
+            <p>Interested in working together? Reach out!</p>
+        </div>
+        <div class="linkbutton">
+            <button><a href="https://linkedin.com/in/itsmanishgautam" target="_blank">Linkedin Profile</a></button>
+            <button><a href="mailto:itsmanishgautam@gmail.com" target="_blank">Email to
+                    Itsmanishgautam@gmail.com</a></button>
+        </div>
+        <div class="social">
+            <a href="https://github.com/itsmanishgautam" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/itsmanishgautam" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+            <a href="https://facebook.com/fbmanishgautam/"><i class="fab fa-facebook"></i></a>
+            <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 by Manish Gautam. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
