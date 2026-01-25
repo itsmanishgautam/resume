@@ -1,250 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manish Gautam - Full Stack Developer</title>
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            background: #f9f9f9;
-            color: #222;
-        }
-        header {
-            background: #111;
-            color: #fff;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            padding: 4rem 2rem;
-            background: #fff;
-        }
-        .hero img {
-            width: 280px;
-            border-radius: 10px;
-            margin: 1rem;
-        }
-        .hero-text {
-            max-width: 600px;
-            margin: 1rem;
-        }
-        .hero-text h1 {
-            font-size: 2.5rem;
-        }
-        .hero-text h3 {
-            color: #555;
-            margin-top: 0.5rem;
-        }
-        .hero-text .typewrite {
-            font-weight: bold;
-            color: #007bff;
-        }
-        .social-icons a {
-            margin-right: 1rem;
-            font-size: 1.5rem;
-            color: #007bff;
-        }
-        .btn {
-            margin-top: 1rem;
-            padding: 0.6rem 1.2rem;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        section {
-            padding: 3rem 2rem;
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .projects, .education, .certificates {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-        .card {
-            background: #fff;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            max-width: 320px;
-        }
-        .card img {
-            width: 100%;
-            border-radius: 6px;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: #111;
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manish Gautam - Full Stack Developer</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="css/home.css" />
 </head>
 
+
+
 <body>
-    <header>
-        <div><strong>Manish Gautam</strong></div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Floating background shapes -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
 
-    <section class="hero" id="home">
-        <img src="images/manishh.png" alt="Manish Gautam">
-        <div class="hero-text">
-            <h3>Hello, I am</h3>
-            <h1>Manish Gautam</h1>
-            <p class="typewrite" data-period="2000" data-type='[ "Full Stack Developer...", "Backend Developer...", "Software Developer..." ]'><span class="wrap"></span></p>
-            <h3>The backend: where data and logic merge seamlessly.</h3>
-            <div class="social-icons">
-                <a href="https://github.com/itsmanishgautam" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/itsmanishgautam" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-            <a class="btn" href="files/ManishGautam Resume.pdf" download>Download Resume</a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">Manish <span>Gautam</span></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-underline"></div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text reveal">
+        <p class="hero-intro">Hello, I am</p>
+        <h1 class="hero-title">
+          Manish <span class="gradient-text">Gautam</span>
+        </h1>
+        <p class="typewrite" data-period="2000"
+          data-type='[ "Full Stack Developer...", "Backend Developer...", "Software Developer..." ]'>
+          <span class="wrap"></span>
+        </p>
+        <p class="hero-subtitle">
+          The backend: where data and logic merge seamlessly.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary-btn" href="files/ManishGautam Resume.pdf" download>
+            <span>Download Resume</span>
+            <i class="fa-solid fa-download"></i>
+          </a>
+          <a class="btn ghost-btn" href="#projects">
+            <span>View Projects</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
-    </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p style="max-width: 700px; margin: auto; text-align: center;">I'm a CSIT student at Texas International College, passionate about software engineering and web development. I specialize in Python with Django and enjoy creating meaningful web applications. I’m also diving into the world of AI and ML.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="card">
-                <img src="images/job.png" alt="Job Portal">
-                <h3>Job Searching Portal</h3>
-                <p>A job platform for employers and job seekers with easy recruitment and application processes.</p>
-                <a class="btn" href="https://github.com/itsmanishgautam/jobsearching-main">GitHub</a>
-            </div>
-            <div class="card">
-                <img src="images/quiz.png" alt="Quiz App">
-                <h3>Quiz App</h3>
-                <p>Create, manage and take quizzes easily with a dynamic admin dashboard.</p>
-                <a class="btn" href="https://github.com/itsmanishgautam/svm-app">GitHub</a>
-            </div>
-            <div class="card">
-                <img src="images/todo.png" alt="Todo App">
-                <h3>Todo App</h3>
-                <p>A clean interface to manage daily tasks, mark them done and delete with ease.</p>
-                <a class="btn" href="https://github.com/itsmanishgautam/TodoAppWORKING">GitHub</a>
-            </div>
+        <div class="social-icons">
+          <a href="https://github.com/itsmanishgautam" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/itsmanishgautam" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
-    </section>
+      </div>
 
-    <section id="certificates">
-        <h2>Certificates</h2>
-        <div class="certificates">
-            <div class="card">
-                <img src="images/AI with Python.png" alt="AI Python Certificate">
-                <p>Certified in Artificial Intelligence with Python</p>
-            </div>
-            <div class="card">
-                <img src="images/Python ML.png" alt="ML Python Certificate">
-                <p>Certified in Machine Learning with Python</p>
-            </div>
+      <div class="hero-image-wrapper reveal delay-1">
+        <div class="hero-image-glow"></div>
+        <img src="images/manishh.png" alt="Manish Gautam" class="hero-image" />
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span class="scroll-text">Scroll</span>
+      <span class="scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="section-header reveal">
+      <h2>About <span class="accent-dot">Me</span></h2>
+      <p class="section-subtitle">
+        MS-CIS student, backend-focused full stack developer, and AI/ML enthusiast.
+      </p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <h3>Who am I?</h3>
+        <p>
+          MS student at Texas Tech University (Lubbock, TX), passionate about software engineering, AI, and web development. I specialize in Python, Django, and machine learning. Currently, I’m working on AI, ML, Deep Learning, and Generative AI projects.
+        </p>
+      </div>
+      <div class="skills-card reveal delay-1">
+        <h3>Core <span class="gradient-text">Skills</span></h3>
+        <div class="skill">
+          <div class="skill-label">
+            <span>Python &amp; Django</span>
+            <span>Advanced</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 90%;"></div>
+          </div>
         </div>
-    </section>
-
-    <section id="contact">
-        <h2>Let's Collaborate</h2>
-        <p style="text-align: center;">Interested in working on a project together? Feel free to reach out!</p>
-        <div style="text-align: center; margin-top: 1rem;">
-            <a class="btn" href="mailto:itsmanishgautam@gmail.com">Email Me</a>
-            <a class="btn" href="https://linkedin.com/in/itsmanishgautam" target="_blank">LinkedIn</a>
+        <div class="skill">
+          <div class="skill-label">
+            <span>REST APIs &amp; Backend</span>
+            <span>Advanced</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 88%;"></div>
+          </div>
         </div>
-    </section>
+        <div class="skill">
+          <div class="skill-label">
+            <span>HTML, CSS, JS</span>
+            <span>Intermediate</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 80%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-label">
+            <span>AI &amp; ML (Python)</span>
+            <span>Learning</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 65%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Manish Gautam. Built with ❤️</p>
-    </footer>
+  <!-- Projects -->
+  <section id="projects" class="section alt">
+    <div class="section-header reveal">
+      <h2>Featured <span class="accent-dot">Projects</span></h2>
+      <p class="section-subtitle">
+        Real-world applications showcasing backend, full stack, and product thinking.
+      </p>
+    </div>
 
-    <script>
-        var TxtType = function (el, toRotate, period) {
-            this.toRotate = toRotate;
-            this.el = el;
-            this.loopNum = 0;
-            this.period = parseInt(period, 10) || 2000;
-            this.txt = '';
-            this.tick();
-            this.isDeleting = false;
-        };
+    <div class="projects-grid">
+      <!-- Job Portal -->
+      <article class="card project-card reveal">
+        <div class="card-thumb">
+          <img src="images/job.png" alt="Job Portal" />
+        </div>
+        <div class="card-body">
+          <h3>Job Searching Portal</h3>
+          <p>
+            End-to-end job portal where admins post jobs and users apply, save, and manage applications with authentication, notifications, and persistent storage.
+          </p>
+          <ul>
+            <li>Implemented secure user auth (register, login, password change) and role-based admin features.</li>
+            <li>Built CRUD workflows for job management and application handling on top of a relational database.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Django</span>
+            <span class="tag">HTML</span>
+            <span class="tag">SQLite</span>
+          </div>
+          <a class="btn small-btn" href="https://github.com/itsmanishgautam/jobsearching-main" target="_blank">
+            <span>View on GitHub</span>
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </article>
 
-        TxtType.prototype.tick = function () {
-            var i = this.loopNum % this.toRotate.length;
-            var fullTxt = this.toRotate[i];
+      <!-- Quiz App -->
+      <article class="card project-card reveal delay-1">
+        <div class="card-thumb">
+          <img src="images/quiz.png" alt="Quiz App" />
+        </div>
+        <div class="card-body">
+          <h3>Quiz Application (svm-app)</h3>
+          <p>
+            Web-based quiz platform built as a group project, enabling users to take subject-wise quizzes and view scores via a clean dashboard.
+          </p>
+          <ul>
+            <li>Owned backend development, including Django models, views, and core quiz logic.</li>
+            <li>Structured quiz, subject, and user data using MVC-style architecture and SQLite.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Django</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">SQLite</span>
+          </div>
+          <a class="btn small-btn" href="https://github.com/itsmanishgautam/svm-app" target="_blank">
+            <span>View on GitHub</span>
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </article>
 
-            this.txt = this.isDeleting ?
-                fullTxt.substring(0, this.txt.length - 1) :
-                fullTxt.substring(0, this.txt.length + 1);
+      <!-- Health Website -->
+      <article class="card project-card reveal delay-2">
+        <div class="card-thumb">
+          <img src="images/heathwebsite.png" alt="Health Website" />
+        </div>
+        <div class="card-body">
+          <h3>TestHealthWebsite - Healthume</h3>
+          <p>
+            Medically oriented health and wellness content platform focusing on verified, user-friendly articles across mental health, nutrition, fitness, and lifestyle.
+          </p>
+          <ul>
+            <li>Structured content into clear domain sections with SEO-aware, mobile-first page layouts.</li>
+            <li>Integrated basic search, newsletter hooks, and privacy-conscious information architecture.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+          <a class="btn small-btn" href="https://github.com/itsmanishgautam/TestHealthWebsite-Healthume" target="_blank">
+            <span>View on GitHub</span>
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </article>
 
-            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+      <!-- Python-AI-Research-Code (Grouped AI/ML Repo) -->
+      <article class="card project-card reveal delay-3">
+        <div class="card-thumb">
+          <img src="images/ai-research.png" alt="AI Research and Experiments" />
+        </div>
+        <div class="card-body">
+          <h3>Python-AI-Research-Code</h3>
+          <p>
+            Internship-era collection of AI, ML, NLP, automation, and data analysis mini-projects in Python and Jupyter notebooks.
+          </p>
+          <ul>
+            <li>Built a job scraper for JobsNepal using BeautifulSoup and regex to extract clean CSV job datasets.</li>
+            <li>Developed a rule-based chatbot with Levenshtein-distance similarity and “irritation” logic for repeated queries.</li>
+            <li>Implemented relation sorting and NLP-based matching using linked lists and spaCy for user-input mapping.</li>
+            <li>Created event/article analysis scripts for key-point extraction and summarization of unstructured text.</li>
+            <li>Documented KMC Skill Fair 2024, capturing training programs, partners, dates, and objectives.</li>
+            <li>Designed a CSV tokenization and search system with interactive CLI append and query features.</li>
+            <li>Built a matrix navigation bot using a greedy path-finding algorithm over randomly generated matrices.</li>
+            <li>Implemented a math-operation extractor that reads plain text and applies operations (sum, product, power, etc.).</li>
+            <li>Trained a TensorFlow/Keras text classifier with embedding and dense layers for binary text classification.</li>
+            <li>Coded linear regression from scratch via the normal equation on synthetic noisy data, visualized with Matplotlib.</li>
+            <li>Analyzed NEPSE, bank interest rates, and commodities for basic investment and cashflow insights.</li>
+            <li>Outlined an early-stage internal cashflow management app for scraping and sharing financial data.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">NLP</span>
+          </div>
+          <a class="btn small-btn" href="https://github.com/itsmanishgautam/Python-AI-Research-Code" target="_blank">
+            <span>View on GitHub</span>
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-            var that = this;
-            var delta = 200 - Math.random() * 100;
+  <!-- Certificates -->
+  <section id="certificates" class="section">
+    <div class="section-header reveal">
+      <h2>Certificates</h2>
+      <p class="section-subtitle">
+        Continuous learning in AI, ML, and Python-backed development.
+      </p>
+    </div>
 
-            if (this.isDeleting) { delta /= 2; }
+    <div class="certificates-grid">
+      <div class="card cert-card reveal">
+        <div class="cert-thumb tilt">
+          <img src="images/AI with Python.png" alt="AI Python Certificate" />
+        </div>
+        <p>Artificial Intelligence with Python</p>
+      </div>
+      <div class="card cert-card reveal delay-1">
+        <div class="cert-thumb tilt">
+          <img src="images/Python ML.png" alt="ML Python Certificate" />
+        </div>
+        <p>Machine Learning with Python</p>
+      </div>
+    </div>
+  </section>
 
-            if (!this.isDeleting && this.txt === fullTxt) {
-                delta = this.period;
-                this.isDeleting = true;
-            } else if (this.isDeleting && this.txt === '') {
-                this.isDeleting = false;
-                this.loopNum++;
-                delta = 500;
-            }
+  <!-- Contact -->
+  <section id="contact" class="section alt">
+    <div class="section-header reveal">
+      <h2>Let's <span class="accent-dot">Collaborate</span></h2>
+      <p class="section-subtitle">
+        Open to internships, backend roles, and impactful side projects.
+      </p>
+    </div>
 
-            setTimeout(function () {
-                that.tick();
-            }, delta);
-        };
+    <div class="contact-panel reveal">
+      <p>
+        Interested in working on a project together or discussing an opportunity? Feel free to reach out.
+      </p>
+      <div class="contact-actions">
+        <a class="btn primary-btn" href="mailto:itsmanishgautam@gmail.com">
+          <span>Email Me</span>
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a class="btn ghost-btn" href="https://linkedin.com/in/itsmanishgautam" target="_blank">
+          <span>Connect on LinkedIn</span>
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
-        window.onload = function () {
-            var elements = document.getElementsByClassName('typewrite');
-            for (var i = 0; i < elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-type');
-                var period = elements[i].getAttribute('data-period');
-                if (toRotate) {
-                    new TxtType(elements[i], JSON.parse(toRotate), period);
-                }
-            }
-        };
-    </script>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; Manish Gautam </p>
+  </footer>
+
+  <!-- Typewriter & Scroll Reveal JS -->
+  <script>
+    // Typewriter
+    var TxtType = function (el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = "";
+      this.tick();
+      this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function () {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
+
+      this.txt = this.isDeleting
+        ? fullTxt.substring(0, this.txt.length - 1)
+        : fullTxt.substring(0, this.txt.length + 1);
+
+      this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+      var that = this;
+      var delta = 200 - Math.random() * 100;
+
+      if (this.isDeleting) {
+        delta /= 2;
+      }
+
+      if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === "") {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+      }
+
+      setTimeout(function () {
+        that.tick();
+      }, delta);
+    };
+
+    window.addEventListener("load", function () {
+      var elements = document.getElementsByClassName("typewrite");
+      for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute("data-type");
+        var period = elements[i].getAttribute("data-period");
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+      }
+    });
+
+    // Scroll reveal using IntersectionObserver
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealEls.forEach((el) => observer.observe(el));
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
 </body>
 
 </html>
