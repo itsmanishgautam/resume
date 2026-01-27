@@ -358,6 +358,22 @@ a {
   font-size: 0.9rem;
 }
 
+
+@media screen and (max-width: 768px) {
+  .site-header {
+    overflow-x: auto;
+  }
+
+  .nav ul {
+    flex-wrap: nowrap;
+  }
+
+  .nav ul li {
+    flex-shrink: 0;
+  }
+}
+
+
 @media screen and (min-width: 992px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
